@@ -1,1 +1,2 @@
-DOM -> Document
+DOM -> Document Object Model
+es un docuemto que me va a definir todas las etiquetas de html
