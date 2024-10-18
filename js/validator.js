@@ -9,5 +9,10 @@
 // console.log(document.querySelector('.clase'))
 // console.log(document.querySelectorAll('.clase'))
 
-let input = document.getElementById('fecha')
-console.log(input)
+//let input = document.getElementById('fecha')
+//console.log(input)
+
+
+import { registrarTiempos } from "../Controllers/ControllerTiempos.js";
+
+document.getElementById('btnRegistrar').addEventListener('click', registrarTiempos)                                        //escuchador de eventos (agregue un evento a la etiqueta)
