@@ -12,20 +12,26 @@ export function registrarTiempos() {
   };
   Tiempos.push(newRegistro);
   console.log(Tiempos);
-  crearRegistroTiempo();
+  crearRegistroTiempo(newRegistro);
 }
 
-function crearRegistroTiempo() {
+function crearRegistroTiempo(newRegistro) {
   let registro = document.createElement("tr");
-  let Fecha = document.createElement("td");
+  let fecha = document.createElement("td");
   let tiempo = document.createElement("td");
   let proyecto = document.createElement("td");
   let acciones = document.createElement("td");
   let editar = document.createElement("button");
-  let elimoinar = document.createElement("button");
+  let eliminar = document.createElement("button");
 
-  acciones.append(editar, eliminar)
-  regitro.append(fecha, tiempo, proyecto, acciones);
-  console.log(registro)
-  
+  fecha.textContent = newRegistro.fecha;
+  tiempo.textContent = newRegistro.tiempo;
+  proyecto.textContent = newRegistro.proyecto;
+  editar.textContent = "editar";
+  eliminar.textContent = "eliminar";
+  acciones.classList.add('botones')
+  acciones.append(editar, eliminar);
+  registro.append(fecha, tiempo, proyecto, acciones);
+  console.log(registro);
+  document.getElementById("Registro").append(registro);
 }
