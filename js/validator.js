@@ -1,4 +1,13 @@
 
 import { registrarTiempos } from "../Controllers/ControllerTiempos.js";
-import {listarProyectos, filtarPorProyecto, filtrarPorEmpresa, filtrarPorTipoProyectos, f} from '../Controllers/ControllerProyectos.js'
-document.getElementById('btnRegistrar').addEventListener('click', registrarTiempos)                                        //escuchador de eventos (agregue un evento a la etiqueta)
+import {listarProyectos, filtrarPorEmpresa, filtarPorProyecto, filtrarPorTipoProyectos} from '../Controllers/ControllerProyectos.js';
+
+let btnRegistrar = document.getElementById('btnRegistrar')
+if (btnRegistrar){
+    btnRegistrar.addEventListener('click', registrarTiempos)
+}
+
+let listaProyectos = document.getElementById('listarProyectos')
+if(listaProyectos){
+    listaProyectos.addEventListener('click', listarProyectos)
+}
