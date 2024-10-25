@@ -1,6 +1,7 @@
 import { proyectos } from "../Models/ModelProyectos.js";
 
 export function listarProyectos() {
+    console.log(proyectos)
 
 }
 
